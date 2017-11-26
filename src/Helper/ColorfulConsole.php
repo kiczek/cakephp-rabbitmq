@@ -17,10 +17,10 @@ class ColorfulConsole
     /**
      * Print a colored message according to the state provided.
      *
-     * @param string $state
-     * @param string $message
+     * @param \string $state
+     * @param \string $message
      */
-    public function __invoke(string $state, string $message)
+    public function __invoke(\string $state, \string $message)
     {
         if (!isset(self::COLORS[$state])) {
             throw new \InvalidArgumentException('Unknow state provided: ' . $state);

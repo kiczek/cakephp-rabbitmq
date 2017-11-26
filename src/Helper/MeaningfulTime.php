@@ -11,9 +11,9 @@ class MeaningfulTime
      *
      * @param int $ms
      *
-     * @return string
+     * @return \string
      */
-    protected function _parseMillisecond(int $ms)
+    protected function _parseMillisecond(\int $ms)
     {
         if ($ms < 1000) {
             return sprintf('%d ms', $ms);
@@ -34,7 +34,7 @@ class MeaningfulTime
      *
      * @param int $s
      *
-     * @return string
+     * @return \string
      */
     protected function _parseSecond($s)
     {
@@ -57,7 +57,7 @@ class MeaningfulTime
      *
      * @param int $min
      *
-     * @return string
+     * @return \string
      */
     protected function _parseMinute($min)
     {
@@ -80,7 +80,7 @@ class MeaningfulTime
      *
      * @param int $hr
      *
-     * @return string
+     * @return \string
      */
     protected function _parseHour($hr)
     {
@@ -90,12 +90,12 @@ class MeaningfulTime
     /**
      * Return time in user-friendly time format.
      *
-     * @param int    $time
-     * @param string $type
+     * @param \int    $time
+     * @param \string $type
      *
      * @return string
      */
-    public function __invoke(int $time, string $type)
+    public function __invoke(\int $time, \string $type)
     {
         switch ($type) {
             case 'min':

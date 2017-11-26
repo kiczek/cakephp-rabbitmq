@@ -57,7 +57,7 @@ class Config
     /**
      * Get a queue configuration according to the key.
      *
-     * @param string $key
+     * @param \string $key
      *
      * @throws InvalidArgumentException if config specified by key not found
      * @throws InvalidArgumentException if key is 'server'
@@ -65,7 +65,7 @@ class Config
      *
      * @return array queue configuration
      */
-    public static function get(string $key)
+    public static function get(\string $key)
     {
         if (isset(static::$_configs[$key])) {
             return static::$_configs[$key];
@@ -137,11 +137,11 @@ class Config
     /**
      * Get and generate default configuration according to the key.
      *
-     * @param string $key
+     * @param \string $key
      *
      * @return array default queue configuration
      */
-    protected static function _getDefaultConfig(string $key)
+    protected static function _getDefaultConfig(\string $key)
     {
         $defaultConfig = include self::DEFAULT_CONFIG;
 

@@ -32,10 +32,10 @@ class CakephpRabbitMQ
     /**
      * Send message to queue specified by key.
      *
-     * @param string $key
-     * @param string $message
+     * @param \string $key
+     * @param \string $message
      */
-    public static function send(string $key, string $message)
+    public static function send(\string $key, \string $message)
     {
         RabbitMQ::send(Config::getServer(), Config::get($key), $message);
     }
@@ -43,12 +43,12 @@ class CakephpRabbitMQ
     /**
      * Generate internal callback function for queue.
      *
-     * @param string $key
+     * @param \string $key
      * @param array  $config
      *
      * @return callable
      */
-    protected static function _generateInternalCallback(string $key, array $config)
+    protected static function _generateInternalCallback(\string $key, array $config)
     {
         $callback = static::_generateUserCallback($key, $config);
 
@@ -99,12 +99,12 @@ class CakephpRabbitMQ
     /**
      * Generate callback according according to the callback type provided.
      *
-     * @param string $key
+     * @param \string $key
      * @param array  $config
      *
      * @return callable
      */
-    protected static function _generateUserCallback(string $key, array $config)
+    protected static function _generateUserCallback(\string $key, array $config)
     {
         // callable
         if (isset($config['callback'])) {

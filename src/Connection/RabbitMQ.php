@@ -38,9 +38,9 @@ class RabbitMQ
      *
      * @param array  $server
      * @param array  $config
-     * @param string $messsage
+     * @param \string $messsage
      */
-    public static function send(array $server, array $config, string $messsage)
+    public static function send(array $server, array $config, \string $messsage)
     {
         $connection = static::_newAMQPConnection($server);
         $channel = $connection->channel();
